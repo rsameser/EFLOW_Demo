@@ -8,13 +8,13 @@
         "name": "rtspUserName",
         "type": "String",
         "description": "rtsp source user name.",
-        "default": "dummyUserName"
+        "default": "user"
       },
       {
         "name": "rtspPassword",
         "type": "String",
         "description": "rtsp source password.",
-        "default": "dummyPassword"
+        "default": "pass"
       },
       {
         "name": "rtspUrl",
@@ -76,7 +76,7 @@
         },
         "samplingOptions": {
           "skipSamplesWithoutAnnotation": "false",
-          "maximumSamplesPerSecond": "5"
+          "maximumSamplesPerSecond": "1"
         },
         "inputs": [
           {
