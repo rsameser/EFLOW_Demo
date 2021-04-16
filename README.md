@@ -5,3 +5,5 @@
 3. Install EFLOW following the [Install Azure IoT Edge for Linux on Windows | Microsoft Docs](https://docs.microsoft.com/en-us/azure/iot-edge/how-to-install-iot-edge-on-windows?view=iotedge-2018-06&tabs=windowsadmincenter) guide.
 4. Use Visual Studio Code to deploy the modules using the [deployment.eflow_demo.template.json](./deployment.eflow_demo.template.json)
 5. Run the EFLOW+LVA code on the Windows Host
+6. Ssh into the EFLOW VM 
+7. Run `sudo iptables -A INPUT -p udp --dport 554 -j ACCEPT`
