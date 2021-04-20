@@ -12,7 +12,7 @@
 10. Run the EFLOW+LVA code on the Windows Host
 11. Ssh into the EFLOW VM  `Ssh-EflowVm`
 12. Run: `sudo iptables -A INPUT -p udp --dport 554 -j ACCEPT`
-13. Run: `sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT 
-14. Run: `sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT 
+13. Run: `sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT` 
+14. Run: `sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT` 
 15. Run: `sudo iptables-save | sudo tee /etc/systemd/scripts/ip4save > /dev/null`
 14. Check the EFLOW VM IP `sudo ifconfig`
