@@ -15,4 +15,5 @@
 13. Run: `sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT` 
 14. Run: `sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT` 
 15. Run: `sudo iptables-save | sudo tee /etc/systemd/scripts/ip4save > /dev/null`
-14. Check the EFLOW VM IP `sudo ifconfig`
+16. Run: `mkdir ~/certs/`
+17. Check the EFLOW VM IP `sudo ifconfig`
