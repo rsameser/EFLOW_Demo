@@ -12,14 +12,15 @@
 10. Run the EFLOW+LVA code on the Windows Host
 11. Ssh into the EFLOW VM  `Ssh-EflowVm`
 12. Run: `sudo iptables -A INPUT -p udp --dport 554 -j ACCEPT`
-13. Run: `sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT` 
-14. Run: `sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT` 
-15. Run: `sudo iptables-save | sudo tee /etc/systemd/scripts/ip4save > /dev/null`
-16. Run: `mkdir ~/certs/`
-17. Check the EFLOW VM IP `sudo ifconfig`
-18. wget https://raw.githubusercontent.com/Azure/live-video-analytics/master/edge/setup/prep_device.sh > prep_device.sh
-19. sudo sh prep_device.sh
-20. Copy Certificates to EFLOW VM environment
+13. Run: `sudo iptables -A INPUT -p tcp --dport 554 -j ACCEPT`
+14. Run: `sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT` 
+15. Run: `sudo iptables -A INPUT -p tcp --dport 5671 -j ACCEPT` 
+16. Run: `sudo iptables-save | sudo tee /etc/systemd/scripts/ip4save > /dev/null`
+17. Run: `mkdir ~/certs/`
+18. Check the EFLOW VM IP `sudo ifconfig`
+19. wget https://raw.githubusercontent.com/Azure/live-video-analytics/master/edge/setup/prep_device.sh > prep_device.sh
+20. sudo sh prep_device.sh
+21. Copy Certificates to EFLOW VM environment
 
    * Use PowerShell on the Windows host to get the EFLOW VM IP address.  
 
