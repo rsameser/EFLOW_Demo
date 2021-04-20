@@ -39,18 +39,6 @@
     ```bash
     sudo nano /etc/iotedge/config.yaml
     ```    
-    
-    > **Note:** Skip the following step if Azure IoT Edge was deployed using EFLOW installation. Only replace the connection if it was manually provisioned.
-    
-    
-    * Replace `"<IoT Edge Device connection string>"` in the 'Manual provisioning configuration with the connection string that you obtained in Step 2-6.
-    
-        ```yaml
-        # Manual provisioning configuration
-        provisioning:
-          source: "manual"
-          device_connection_string: "<IoT Edge Device connection string>"
-        ```
    * Set the location of the certificates that were copied ot the device earlier.
         ```yaml
         certificates:
