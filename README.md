@@ -42,9 +42,9 @@
    * Set the location of the certificates that were copied ot the device earlier.
         ```yaml
         certificates:
-          device_ca_cert: "/home/efl-user/certs/new-edge-device-full-chain.cert.pem"
-          device_ca_pk: "/home/efl-user/certs/new-edge-device.key.pem"
-          trusted_ca_certs: "/home/efl-user/certs/azure-iot-test-only.root.ca.cert.pem"
+          device_ca_cert: "/home/iotedge-user/certs/new-edge-device-full-chain.cert.pem"
+          device_ca_pk: "/home/iotedge-user/certs/new-edge-device.key.pem"
+          trusted_ca_certs: "/home/iotedge-user/certs/azure-iot-test-only.root.ca.cert.pem"
         ```
         > **Note:** <Make sure there are no whitespaces before certificates paths and two spaces indenting each sub part. 
 
