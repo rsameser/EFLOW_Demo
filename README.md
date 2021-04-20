@@ -32,12 +32,12 @@
       ```powershell
       scp -i 'C:\Program Files\Azure IoT Edge\id_rsa'  .\certs\* iotedge-user@<eflowvm-ip>:~/certs/​
       ```
-19. **Read the certificates**  
+22. **Read the certificates**  
     Run the following command to allow Azure IoT Edge to read the certificates.
     ```bash
     sudo chown -R iotedge: ~/certs
     ```
-20. **Provision the Azure IoT Edge for Linux configuration**  
+23. **Provision the Azure IoT Edge for Linux configuration**  
     To edit config.yaml run the following command:
     ```bash
     sudo nano /etc/iotedge/config.yaml
@@ -56,11 +56,11 @@
  
    * To save the file and exit nano, press <kbd>CTRL</kbd>+<kbd>x</kbd>, confirm save and exit with <kbd>Y</kbd> and press <kbd>Enter</kbd>. This concludes the provisioning and configuration.
    
-21. **Restart IoT Edge**    
+24. **Restart IoT Edge**    
     Restart IoT Edge by running the following command.
     ```base
     sudo systemctl restart iotedge
     ```
     
-22. Install https://marketplace.visualstudio.com/items?itemName=ms-azuretools.live-video-analytics-edge
-23. Create azure child device : https://github.com/Azure/iotedge-eflow/blob/main/samples/interop-textmsg-consoleapp/Documentation/Setup%20Azure%20Resources.MD
+25. Install https://marketplace.visualstudio.com/items?itemName=ms-azuretools.live-video-analytics-edge
+26. Create azure child device : https://github.com/Azure/iotedge-eflow/blob/main/samples/interop-textmsg-consoleapp/Documentation/Setup%20Azure%20Resources.MD
