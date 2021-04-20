@@ -61,3 +61,5 @@
     ```base
     sudo systemctl restart iotedge
     ```
+    
+22. Install https://marketplace.visualstudio.com/items?itemName=ms-azuretools.live-video-analytics-edge
