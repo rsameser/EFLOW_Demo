@@ -26,7 +26,50 @@
        ``` 
 
   * Use SCP to copy the certificates created in [Step 5](./Create%20Certificates%20for%20Authentication.MD) to the `~/certs` folder of your EFLOW VM environment.  
-
-        ```powershell
-        scp -i 'C:\Program Files\Azure IoT Edge\id_rsa'  .\certs\* iotedge-user@<eflowvm-ip>:~/certs/​
+      ```powershell
+      scp -i 'C:\Program Files\Azure IoT Edge\id_rsa'  .\certs\* iotedge-user@<eflowvm-ip>:~/certs/​
+      ```
+19. **Read the certificates**  
+    Run the following command to allow Azure IoT Edge to read the certificates.
+    ```bash
+    sudo chown -R iotedge: ~/certs
+    ```
+20. **Provision the Azure IoT Edge for Linux configuration**  
+    To edit config.yaml run the following command:
+    ```bash
+    sudo nano /etc/iotedge/config.yaml
+    ```    
+    
+    > **Note:** Skip the following step if Azure IoT Edge was deployed using EFLOW installation. Only replace the connection if it was manually provisioned.
+    
+    
+    * Replace `"<IoT Edge Device connection string>"` in the 'Manual provisioning configuration with the connection string that you obtained in Step 2-6.
+    
+        ```yaml
+        # Manual provisioning configuration
+        provisioning:
+          source: "manual"
+          device_connection_string: "<IoT Edge Device connection string>"
         ```
+   * Set the location of the certificates that were copied ot the device earlier.
+        ```yaml
+        certificates:
+          device_ca_cert: "/home/efl-user/certs/new-edge-device-full-chain.cert.pem"
+          device_ca_pk: "/home/efl-user/certs/new-edge-device.key.pem"
+          trusted_ca_certs: "/home/efl-user/certs/azure-iot-test-only.root.ca.cert.pem"
+        ```
+        > **Note:** <Make sure there are no whitespaces before certificates paths and two spaces indenting each sub part. 
+
+    * If you are on a network without dynamic DNS, you will need to assign the VM a static IP address and replace the line
+    `hostname: "…"` with `hostname: "<Linux VM Hostname>"`.
+    
+      > **Note:** Skip the next step if you are on a network with dynamic DNS, then edge modules will automatically be able to resolve the VM’s IP address from its hostname. 
+
+
+ 
+    * To save the file and exit nano, press <kbd>CTRL</kbd>+<kbd>x</kbd>, confirm save and exit with <kbd>Y</kbd> and press <kbd>Enter</kbd>. This concludes the provisioning and configuration.
+21. **Restart IoT Edge**    
+    Restart IoT Edge by running the following command.
+    ```base
+    sudo systemctl restart iotedge
+    ```
