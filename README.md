@@ -63,3 +63,4 @@
     ```
     
 22. Install https://marketplace.visualstudio.com/items?itemName=ms-azuretools.live-video-analytics-edge
+23. Create azure child device : https://github.com/Azure/iotedge-eflow/blob/main/samples/interop-textmsg-consoleapp/Documentation/Setup%20Azure%20Resources.MD
