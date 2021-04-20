@@ -48,14 +48,11 @@
         ```
         > **Note:** <Make sure there are no whitespaces before certificates paths and two spaces indenting each sub part. 
 
-    * If you are on a network without dynamic DNS, you will need to assign the VM a static IP address and replace the line
+   * If you are on a network without dynamic DNS, you will need to assign the VM a static IP address and replace the line
     `hostname: "…"` with `hostname: "<Linux VM Hostname>"`.
-    
-      > **Note:** Skip the next step if you are on a network with dynamic DNS, then edge modules will automatically be able to resolve the VM’s IP address from its hostname. 
-
-
  
-    * To save the file and exit nano, press <kbd>CTRL</kbd>+<kbd>x</kbd>, confirm save and exit with <kbd>Y</kbd> and press <kbd>Enter</kbd>. This concludes the provisioning and configuration.
+   * To save the file and exit nano, press <kbd>CTRL</kbd>+<kbd>x</kbd>, confirm save and exit with <kbd>Y</kbd> and press <kbd>Enter</kbd>. This concludes the provisioning and configuration.
+   
 21. **Restart IoT Edge**    
     Restart IoT Edge by running the following command.
     ```base
