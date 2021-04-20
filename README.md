@@ -17,7 +17,9 @@
 15. Run: `sudo iptables-save | sudo tee /etc/systemd/scripts/ip4save > /dev/null`
 16. Run: `mkdir ~/certs/`
 17. Check the EFLOW VM IP `sudo ifconfig`
-18. Copy Certificates to EFLOW VM environment
+18. wget https://raw.githubusercontent.com/Azure/live-video-analytics/master/edge/setup/prep_device.sh > prep_device.sh
+19. sudo sh prep_device.sh
+20. Copy Certificates to EFLOW VM environment
 
    * Use PowerShell on the Windows host to get the EFLOW VM IP address.  
 
