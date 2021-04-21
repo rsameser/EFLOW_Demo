@@ -63,4 +63,4 @@
     ```
     
 25. Install https://marketplace.visualstudio.com/items?itemName=ms-azuretools.live-video-analytics-edge
-26. Create azure child device : https://github.com/Azure/iotedge-eflow/blob/main/samples/interop-textmsg-consoleapp/Documentation/Setup%20Azure%20Resources.MD
+26. Create azure child device -> Azure Portal -> Iot Hub -> IoT Devices -> New, put a new device name and then set the paret decime
