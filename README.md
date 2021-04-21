@@ -28,7 +28,7 @@
        Get-EflowVmAddr
        ``` 
 
-  * Use SCP to copy the certificates created in [Step 5](./Create%20Certificates%20for%20Authentication.MD) to the `~/certs` folder of your EFLOW VM environment.  
+  * Use SCP to copy the certificates downloaded
       ```powershell
       scp -i 'C:\Program Files\Azure IoT Edge\id_rsa'  .\certs\* iotedge-user@<eflowvm-ip>:~/certs/​
       ```
